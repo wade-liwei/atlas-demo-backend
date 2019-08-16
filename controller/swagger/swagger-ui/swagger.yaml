@@ -1,0 +1,82 @@
+swagger: '2.0'
+info:
+  description: API for getting BTC info for Atlas
+  version: 1.0.0
+  title: Atlas BTC API
+  # put the contact info for your development or API team
+  contact:
+    email: brian@blockdynamics.io
+
+consumes:
+  - application/json
+produces:
+  - application/json
+
+schemes:
+  - http
+  - https
+
+tags:
+  - name: BTC
+    description:  wrap www.blockchain.com  APIs.
+
+paths:
+  /btc/banner:
+    get:
+      tags:
+        - BTC
+      description:  query BTC chain summery info, like average block size、market Cap、volume、Max supply、price
+      responses:
+        200:
+          schema:
+            $ref: "#/definitions/BtcBinner"
+        default:
+          description: generic error response
+          schema:
+            $ref: "#/definitions/error"
+definitions:
+  BtcBinner:
+    type: object
+    properties:
+      average_block_size:
+        type: integer
+        format: float64
+      transaction_per_day:
+        type: integer
+        format: int64
+      mempool_size:
+        type: integer
+        format: int64
+      market_cap:
+        type: integer
+        format: int64
+      volume:
+        type: integer
+        format: int64
+      circulating_supply:
+        type: integer
+        format: int64
+      max_supply:
+        type: integer
+        format: int64
+      market_price:
+        type: integer
+        format: int64
+      highest_price_for_day:
+        type: integer
+        format: float64
+      lowest_price_for_day:
+        type: integer
+        format: float64
+      change_for_day:
+        type: integer
+        format: float64
+
+
+  error:
+    type: object
+    properties:
+      code:
+        type: string
+      msg:
+        type: string
