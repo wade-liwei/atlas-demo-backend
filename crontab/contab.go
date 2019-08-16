@@ -21,6 +21,8 @@ var Crontab *cron.Cron
 
 func init() {
 	Crontab = cron.New()
+
+	UpdateBtcBanner()
 	Crontab.AddFunc("@every 5m", UpdateBtcBanner)
 
 	Crontab.Start()
