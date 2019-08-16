@@ -7,6 +7,7 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 	"github.com/wade-liwei/atlas-demo-backend/controller"
+	_ "github.com/wade-liwei/atlas-demo-backend/crontab"
 	//homedir "github.com/mitchellh/go-homedir"
 )
 

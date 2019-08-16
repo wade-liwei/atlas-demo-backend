@@ -30,18 +30,18 @@ func (b BtcBanner) Set() error {
 	return Set(BtcBannerKey, jsonAsByte)
 }
 
-func (_ BtcBanner) Get() (*BtcBanner, error) {
+func (_ BtcBanner) Get() ([]byte, error) {
 
 	jsonAsByte, err := Get(BtcBannerKey)
 	if err != nil {
 		return nil, err
 	}
-
-	res := BtcBanner{}
-
-	if err := json.Unmarshal(jsonAsByte, &res); err != nil {
-		return nil, err
-	}
-
-	return &res, nil
+	return jsonAsByte, nil
+	// res := BtcBanner{}
+	//
+	// if err := json.Unmarshal(jsonAsByte, &res); err != nil {
+	// 	return nil, err
+	// }
+	//
+	// return &res, nil
 }

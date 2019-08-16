@@ -2,6 +2,7 @@ package controller
 
 import (
 	"github.com/gorilla/mux"
+	"github.com/wade-liwei/atlas-demo-backend/dao"
 	"net/http"
 )
 
@@ -10,5 +11,12 @@ func registerQueryBtcBanner(r *mux.Router) {
 }
 
 func queryBtcBanner(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("1234567890"))
+
+	jsonAsByte, err := dao.BtcBanner{}.Get()
+
+	if err != nil {
+		w.Write([]byte(err.Error()))
+	}
+
+	w.Write(jsonAsByte)
 }
