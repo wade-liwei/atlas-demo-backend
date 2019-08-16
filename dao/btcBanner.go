@@ -5,10 +5,12 @@ import (
 )
 
 type BtcBanner struct {
+	Price              float64 `json:"price"`
+	TwentyFourHourVol  float64 `json:"24hr_vol"`
 	AverageBlockSize   float64 `json:"average_block_size"`
 	TransactionPerDay  int64   `json:"transaction_per_day"`
 	MempoolSize        int64   `json:"mempool_size"`
-	MarketCap          int64   `json:"market_cap"`
+	MarketCap          float64 `json:"market_cap"`
 	Volume             int64   `json:"volume"`
 	CirculatingSupply  int64   `json:"circulating_supply"`
 	MaxSupply          int64   `json:"max_supply"`

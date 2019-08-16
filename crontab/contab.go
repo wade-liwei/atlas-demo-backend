@@ -6,6 +6,10 @@ import (
 	"net/http"
 )
 
+const (
+	ApiKey = "b5cd3d03-b51f-434a-a12a-0bdc68383c5e"
+)
+
 // c := cron.New()
 // c.AddFunc("0 30 * * * *", func() { fmt.Println("Every hour on the half hour") })
 // c.AddFunc("@hourly",      func() { fmt.Println("Every hour") })
@@ -17,7 +21,7 @@ var Crontab *cron.Cron
 
 func init() {
 	Crontab = cron.New()
-	Crontab.AddFunc("@every 1s", UpdateBtcBanner)
+	Crontab.AddFunc("@every 5m", UpdateBtcBanner)
 
 	Crontab.Start()
 }
