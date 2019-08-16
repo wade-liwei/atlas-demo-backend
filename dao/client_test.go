@@ -2,10 +2,10 @@ package dao
 
 import (
 	"encoding/json"
-	"fmt"
-	"github.com/go-redis/redis"
+	//"fmt"
+	//"github.com/go-redis/redis"
 	"testing"
-	"time"
+	//"time"
 )
 
 type Student struct {
@@ -26,25 +26,37 @@ func TestSetGet(t *testing.T) {
 		t.Error(err)
 	}
 
-	err = client.Set("wade3", jsonByte, 300*time.Second).Err()
+	if err := Set("wade100", jsonByte); err != nil {
+		t.Error(err)
+	}
+
+	jsonByte, err = Get("wade100")
+
 	if err != nil {
-		panic(err)
+		t.Error(err)
 	}
 
-	time.Sleep(1 * time.Second)
+	t.Log(string(jsonByte))
 
-	val, err := client.Get("wade3").Result()
-	if err != nil {
-		panic(err)
-	}
-	fmt.Println("key", val)
-
-	val2, err := client.Get("key2").Result()
-	if err == redis.Nil {
-		fmt.Println("key2 does not exist")
-	} else if err != nil {
-		panic(err)
-	} else {
-		fmt.Println("key2", val2)
-	}
+	// err = client.Set("wade3", jsonByte, 300*time.Second).Err()
+	// if err != nil {
+	// 	panic(err)
+	// }
+	//
+	// time.Sleep(1 * time.Second)
+	//
+	// val, err := client.Get("wade3").Result()
+	// if err != nil {
+	// 	panic(err)
+	// }
+	// fmt.Println("key", val)
+	//
+	// val2, err := client.Get("key2").Result()
+	// if err == redis.Nil {
+	// 	fmt.Println("key2 does not exist")
+	// } else if err != nil {
+	// 	panic(err)
+	// } else {
+	// 	fmt.Println("key2", val2)
+	// }
 }
