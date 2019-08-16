@@ -34,8 +34,8 @@
 
 |source data fields| our page fields  |  note |
 |------------------|------------------|-------|
-|blocksize per day |height            |       |
-|blocksize per day |mined time        |       |
-|blocksize per day |miner             |       |
-|blocksize per day |block hash        |       |
-|blocksize per day |block size        |       |
+|height            |height            |       |
+|time              |mined time        |       |
+|relayed_by        |miner             |       |
+|hash              |block hash        |       |
+|size              |block size        |       |
