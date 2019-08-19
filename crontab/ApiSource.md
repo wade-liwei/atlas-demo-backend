@@ -9,6 +9,7 @@
 |2  |https://blockchain.info/charts/avg-block-size?timespan=1days&format=json|Curl -H “Accept: application/json” -G https://blockchain.info/charts/avg-block-size?timespan=1days&format=json||
 |3  |https://blockchain.info/rawblock/$blockhash| curl https://blockchain.info/rawblock/000000000000000000194e816bc839bf0e9b0a8338fffed8787a01136b582b95||
 |4  |https://api-r.bitcoinchain.com/v1/blocks/10/withTx| curl  https://api-r.bitcoinchain.com/v1/blocks/10/withTx||
+|5  |https://api.smartbit.com.au/v1/blockchain/transactions| curl https://api.smartbit.com.au/v1/blockchain/transactions||
 
 ## BtcBanner
 
