@@ -10,6 +10,21 @@
 |3  |https://blockchain.info/rawblock/$blockhash| curl https://blockchain.info/rawblock/000000000000000000194e816bc839bf0e9b0a8338fffed8787a01136b582b95||
 |4  |https://api-r.bitcoinchain.com/v1/blocks/10/withTx| curl  https://api-r.bitcoinchain.com/v1/blocks/10/withTx||
 
+
+|Data we need         |from API     |
+|---------------------|-------------|
+|average_block_size   |2            |
+|transaction_per_day  |not found yet|
+|mempool_size         |not found yet|
+|market_cap           |1            |
+|volume               |1            |
+|circulating_supply   |1            |
+|max_supply           |1            |
+|market_price         |1            |
+|highest_for_day      |not found yet|
+|lowest_for_day       |not found yet|
+|change_for_day       |not found yet|
+
 ## BtcBanner
 
 1. https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest
