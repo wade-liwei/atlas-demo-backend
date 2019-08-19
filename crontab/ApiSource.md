@@ -24,6 +24,8 @@
 |highest_for_day      |not found yet|
 |lowest_for_day       |not found yet|
 |change_for_day       |not found yet|
+|block list           |not found yet|
+|tx list              |not found yet|
 
 ## BtcBanner
 
