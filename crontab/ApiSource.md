@@ -11,6 +11,23 @@
 |4  |https://api-r.bitcoinchain.com/v1/blocks/10/withTx| curl  https://api-r.bitcoinchain.com/v1/blocks/10/withTx||
 |5  |https://api.smartbit.com.au/v1/blockchain/transactions| curl https://api.smartbit.com.au/v1/blockchain/transactions||
 
+
+|Data we need         |from API     |
+|---------------------|-------------|
+|average_block_size   |2            |
+|transaction_per_day  |not found yet|
+|mempool_size         |not found yet|
+|market_cap           |1            |
+|volume               |1            |
+|circulating_supply   |1            |
+|max_supply           |1            |
+|market_price         |1            |
+|highest_for_day      |not found yet|
+|lowest_for_day       |not found yet|
+|change_for_day       |not found yet|
+|block list           |not found yet|
+|tx list              |not found yet|
+
 ## BtcBanner
 
 1. https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest
