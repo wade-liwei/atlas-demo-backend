@@ -5,7 +5,7 @@ import (
 )
 
 func TestBtcBannerSetGet(t *testing.T) {
-	err := BtcBanner{Volume: 100}.Set()
+	err := BtcBanner{}.Set()
 
 	if err != nil {
 		t.Error(err)

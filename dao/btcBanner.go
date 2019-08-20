@@ -8,16 +8,14 @@ type BtcBanner struct {
 	Price              float64 `json:"price"`
 	TwentyFourHourVol  float64 `json:"24hr_vol"`
 	AverageBlockSize   float64 `json:"average_block_size"`
-	TransactionPerDay  int64   `json:"transaction_per_day"`
-	MempoolSize        int64   `json:"mempool_size"`
+	TransactionPerDay  float64 `json:"transaction_per_day"`
+	MempoolSize        float64 `json:"mempool_size"`
 	MarketCap          float64 `json:"market_cap"`
-	Volume             int64   `json:"volume"`
 	CirculatingSupply  int64   `json:"circulating_supply"`
 	MaxSupply          int64   `json:"max_supply"`
-	MarketPrice        int64   `json:"market_price"`
 	HighestPriceForDay float64 `json:"highest_price_for_day"`
 	LowestPriceForDay  float64 `json:"lowest_price_for_day"`
-	ChangeForDay       float64 `json:"change_for_day"`
+	PercentChange24h   float64 `json:"percent_change_24h"`
 }
 
 const (
