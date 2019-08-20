@@ -23,7 +23,15 @@ func init() {
 	Crontab = cron.New()
 
 	UpdateBtcBanner()
+	UpdateBlockList()
+	UpdateTransactionList()
+	UpdateTransactionRate()
+	UpdateWalletUser()
 	Crontab.AddFunc("@every 5m", UpdateBtcBanner)
+	Crontab.AddFunc("@every 5m", UpdateBlockList)
+	Crontab.AddFunc("@every 5m", UpdateTransactionList)
+	Crontab.AddFunc("@every 5m", UpdateTransactionRate)
+	Crontab.AddFunc("@every 5m", UpdateWalletUser)
 
 	Crontab.Start()
 }

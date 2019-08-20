@@ -48,7 +48,7 @@ func UpdateBtcBanner() {
 		fmt.Printf("m[\"data\"].([]interface{})  !ok")
 	}
 
-	fmt.Println(len(dataArr))
+	//fmt.Println(len(dataArr))
 
 	res := dao.BtcBanner{}
 	for _, v := range dataArr {

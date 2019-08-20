@@ -42,7 +42,7 @@ func UpdateTransactionList() {
 		return
 	}
 
-	fmt.Printf("transaction: %v \n", res)
+	//fmt.Printf("transaction: %v \n", res)
 	err = res.Set()
 
 	if err != nil {

@@ -34,6 +34,50 @@ paths:
           description: generic error response
           schema:
             $ref: "#/definitions/error"
+  /btc/walletuser:
+    get:
+      tags:
+        - BTC
+      responses:
+        200:
+          type: object
+        default:
+          description: generic error response
+          schema:
+            $ref: "#/definitions/error"
+  /btc/transactionrate:
+      get:
+        tags:
+          - BTC
+        responses:
+          200:
+            type: object
+          default:
+            description: generic error response
+            schema:
+              $ref: "#/definitions/error"
+  /btc/blocklist:
+      get:
+        tags:
+          - BTC
+        responses:
+          200:
+            type: object
+          default:
+            description: generic error response
+            schema:
+              $ref: "#/definitions/error"
+  /btc/transactionpage:
+      get:
+        tags:
+          - BTC
+        responses:
+          200:
+            type: object
+          default:
+            description: generic error response
+            schema:
+              $ref: "#/definitions/error"
 definitions:
   BtcBinner:
     type: object

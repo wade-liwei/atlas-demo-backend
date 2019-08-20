@@ -36,7 +36,7 @@ func UpdateTransactionRate() {
 		return
 	}
 
-	fmt.Printf("transactionRate: %s \n", respBody)
+	//fmt.Printf("transactionRate: %s \n", respBody)
 
 	res := dao.TransactionRate{}
 	err = res.Set(respBody)
